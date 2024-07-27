@@ -1,0 +1,66 @@
+.profileContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .profileHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profileImage {
+    display: block;
+    margin: 0 auto 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profileDetails {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup span {
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .bankDetails,
+  .qrDetails {
+    margin-bottom: 20px;
+  }
+  
+  .updateLink {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .updateLink a {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: bold;
+  }
+  
+  .updateLink a:hover {
+    text-decoration: underline;
+  }
+  
