@@ -81,7 +81,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import jwtDecode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 import styles from '../../styles/Navbar.module.css';
 
 const Navbar = () => {

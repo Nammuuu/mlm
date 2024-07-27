@@ -66,7 +66,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import jwtDecode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 import styles from '../../../styles/Dashboard/Dashboard.module.css';
 
 const Dashboard = () => {
