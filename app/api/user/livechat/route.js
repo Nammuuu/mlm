@@ -1,7 +1,11 @@
 // pages/api/livechat.js
 import { Server } from 'socket.io';
-import connectToDatabase from '../../../../../../lib/mongodb';
-import Message from '../../../../../../models/Message';
+// import connectToDatabase from '../../../../../../lib/mongodb';
+// import Message from '../../../../../../models/Message';
+
+import connectToDatabase from '../../../../lib/mongodb';
+import Message from '../../../../models/Message';
+
 
 // export default async function handler(req, res) {
 //   if (!res.socket.server.io) {
