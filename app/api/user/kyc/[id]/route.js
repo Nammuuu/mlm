@@ -3,7 +3,8 @@ import { verify } from 'jsonwebtoken';
 
 import User from '../../../../../models/User';
 // import Profile from '../../../../../../models/Profile';
-import Profile from '../../../../../models/kyc';
+// import Profile from '../../../../../models/kyc';
+import Profile from '../../../../../models/Kyc.js';
 
 import connectToDatabase from '../../../../../lib/mongodb';
 
