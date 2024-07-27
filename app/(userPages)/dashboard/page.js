@@ -3,7 +3,7 @@
 // import { useEffect, useState } from 'react';
 // import { useRouter } from 'next/navigation';
 // import {jwtDecode} from 'jwt-decode';
-// import styles from '../../Dashboard/.module.css';
+// import styles from '../../../styles/Dashboard/Dashboard.module.css';
 
 // const Dashboard = () => {
 //   const [user, setUser] = useState(null);
@@ -27,28 +27,33 @@
 //   if (!user) return <p>Loading...</p>;
 
 //   return (
-//     <div>
-//       <h1>User Dashboard</h1>
-//       <button onClick={handleSignOut}>Sign Out</button>
-//       <h2>Welcome, {user.email}</h2>
+//     <div className={styles.container}>
+//       <h1 className={styles.header}>User Dashboard</h1>
+//       <button onClick={handleSignOut} className={styles.signOutButton}>Logout Out</button>
+//       <h2 className={styles.welcome}>Welcome, {user.email}</h2>
 
-//       <div>
-//         <div> 
-//          <div> 
-//           <P>block 1   </P>
-//          <h1> investment amount </h1>
-//           <div>1000 R's</div>
-//          </div> 
+//       <div className={styles.blocks}>
+//         <div className={styles.block}>
+//           <p className={styles.blockTitle}>Block 1</p>
+//           <h1 className={styles.blockTitle}>Investment Amount</h1>
+//           <div className={styles.blockAmount}>1000 R's</div>
 //         </div>
+//         <div className={styles.block}>
+//           <p className={styles.blockTitle}>Block 2</p>
+//           <h1 className={styles.blockTitle}>Profit Amount</h1>
+//           <div className={styles.blockAmount}>599 R's</div>
+//         </div>
+//       </div>
 
+//       <h2 className={styles.welcome}>quick links</h2>
+//       <h2 className={styles.welcome}>Profile</h2>
+//       <h2 className={styles.welcome}>Kyc</h2>
+//       <h2 className={styles.welcome}>Give Help</h2>
+//       <h2 className={styles.welcome}>Get Help</h2>
+//       <h2 className={styles.welcome}> My Team tree</h2>
+//       <h2 className={styles.welcome}>Support</h2>
+      
 
-//       <div>
-//       <P>block 2   </P>
-//       <h1> Profit amount </h1>
-//        <div>599 R's</div>
-
-//        </div>    
-//     </div> 
 
 //     </div>
 //   );
@@ -57,12 +62,11 @@
 // export default Dashboard;
 
 
-
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import {jwtDecode} from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import styles from '../../../styles/Dashboard/Dashboard.module.css';
 
 const Dashboard = () => {
@@ -77,7 +81,7 @@ const Dashboard = () => {
       const decoded = jwtDecode(token);
       setUser(decoded);
     }
-  }, []);
+  }, [router]);
 
   const handleSignOut = () => {
     localStorage.removeItem('token');
@@ -89,32 +93,29 @@ const Dashboard = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.header}>User Dashboard</h1>
-      <button onClick={handleSignOut} className={styles.signOutButton}>Logout Out</button>
+      <button onClick={handleSignOut} className={styles.signOutButton}>Log Out</button>
       <h2 className={styles.welcome}>Welcome, {user.email}</h2>
 
       <div className={styles.blocks}>
         <div className={styles.block}>
           <p className={styles.blockTitle}>Block 1</p>
           <h1 className={styles.blockTitle}>Investment Amount</h1>
-          <div className={styles.blockAmount}>1000 R's</div>
+          <div className={styles.blockAmount}>1000 R&apos;s</div>
         </div>
         <div className={styles.block}>
           <p className={styles.blockTitle}>Block 2</p>
           <h1 className={styles.blockTitle}>Profit Amount</h1>
-          <div className={styles.blockAmount}>599 R's</div>
+          <div className={styles.blockAmount}>599 R&apos;s</div>
         </div>
       </div>
 
-      <h2 className={styles.welcome}>quick links</h2>
+      <h2 className={styles.welcome}>Quick Links</h2>
       <h2 className={styles.welcome}>Profile</h2>
-      <h2 className={styles.welcome}>Kyc</h2>
+      <h2 className={styles.welcome}>KYC</h2>
       <h2 className={styles.welcome}>Give Help</h2>
       <h2 className={styles.welcome}>Get Help</h2>
-      <h2 className={styles.welcome}> My Team tree</h2>
+      <h2 className={styles.welcome}>My Team Tree</h2>
       <h2 className={styles.welcome}>Support</h2>
-      
-
-
     </div>
   );
 };
